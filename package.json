@@ -1,0 +1,23 @@
+{
+  "name": "todo-mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build": "NODE_ENV=production npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "author": "Arben Djokovic",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.4",
+    "nodemon": "^3.1.9",
+    "path": "^0.12.7",
+    "timeago.js": "^4.0.2"
+  }
+}
