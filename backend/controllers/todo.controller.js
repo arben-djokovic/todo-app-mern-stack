@@ -21,6 +21,18 @@ const getTodos = async (req, res) => {
     }
 };
 
+const getTodo = async (req, res) => {
+    try {
+        const todo = await Todo.findById(req.params.id);
+        if (!todo) {
+            return res.status(404).json({ error: 'Todo not found' });
+        }
+        res.status(200).json(todo);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
 const updateTodo = async (req, res) => {
     try {
         const updateFields = req.body;
@@ -69,4 +81,4 @@ const incompleteTodo = async (req, res) => {
     }
 }
 
-export default { createTodo, getTodos, updateTodo, deleteTodo, completeTodo, incompleteTodo };
+export default { createTodo, getTodos, getTodo, updateTodo, deleteTodo, completeTodo, incompleteTodo };

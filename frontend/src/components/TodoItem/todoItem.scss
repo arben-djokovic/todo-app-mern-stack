@@ -10,6 +10,7 @@
     cursor: pointer;
     width: 100%;
     font-size: 12px;
+    overflow-y: auto;
     &:hover {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
         transform: scale(1.01);
@@ -25,6 +26,7 @@
         grid-gap: 1px;
         flex-direction: column;
         text-align: left;
+        min-width: 100px;
         .date {
             font-size: 12px;
         }

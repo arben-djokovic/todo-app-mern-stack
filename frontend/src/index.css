@@ -9,3 +9,36 @@ body{
     font-weight: 400;
     font-style: normal;
 }
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #b07289;
+    padding: 4vw 0;
+}
+.page .container {
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90vw;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    align-items: center;
+}
+.page .container .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        font-size: 12px;
+    }
+}

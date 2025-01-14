@@ -1,0 +1,59 @@
+.formTodoPage {
+    .homeLink{
+        position: absolute;
+        top: 2vw;
+        left: 2vw;
+        font-size: 25px;
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+        &:hover{
+            opacity: .9;
+        }
+    }
+    .todoForm{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+        align-items: center;
+        justify-content: center;
+        max-width: 500px;
+        width: 100%;
+        .input{
+            display: flex;
+            flex-direction: column;
+            grid-gap: 5px;
+            width: 100%;
+            input{
+                width: 100%;
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid #ababab;
+            }
+            p{
+                text-align: left;
+                display: flex;
+                align-items: center;
+                .error{
+                    color: red;
+                    font-size: 12px;
+                    margin-left: 5px;
+                    display: none;
+                }
+            }
+        }
+        .addTodo{     
+            font-size: 17px;
+            cursor: pointer;
+            background-color:  #b07289bf;
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 10px;
+            width: 100%;
+            &:hover {
+                opacity: .9;
+            }
+        }
+    }
+}

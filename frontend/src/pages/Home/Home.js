@@ -1,7 +1,8 @@
 import React, { useEffect, useState} from 'react'
 import api from '../../api/api';
 import './home.scss'
-import Todo from '../../components/Todo/Todo';
+import TodoItem from '../../components/TodoItem/TodoItem';
+import { Link } from 'react-router-dom';
 
 
 export default function Home() {
@@ -20,14 +21,15 @@ export default function Home() {
         getTodos();
     }, [])
   return (
-    <div className='homePage'>
-        <section className="todoContainer">
+    <div className='homePage page'>
+        <section className="container">
             <h1 className='title'><span>ToDo List </span><i className="fa fa-list-alt" aria-hidden="true"></i></h1>
+            <Link to="/create" className="addTodo"><i className="fa fa-plus" aria-hidden="true"></i></Link>
             <div className="todos">
                 {
-                    todos.map((todo) => (
-                        <Todo key={todo._id} todo={todo} />
-                    ))
+                    todos.length ? todos.map((todo) => (
+                        <TodoItem key={todo._id} todo={todo} />
+                    )) : "No todos found"
                 }
             </div>
         </section>

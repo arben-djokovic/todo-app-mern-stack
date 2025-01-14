@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
-import "./todo.scss"
-import api from './../../api/api';
+import "./todoItem.scss"
+import api from '../../api/api';
+import { Link } from 'react-router-dom';
 
 export default function Todo({todo}) {
     const [checked, setChecked] = useState(todo.completed);
@@ -43,7 +44,7 @@ export default function Todo({todo}) {
             <p className="date">{todo.timeago}</p>
         </div>
         <div className="icons">
-            <i className="fa fa-pencil iconEdit" aria-hidden="true"></i>
+            <Link to={`/edit/${todo._id}`} className="link"><i className="fa fa-pencil iconEdit" aria-hidden="true"></i></Link>
             <i onClick={deleteTodo} className="fa fa-trash-o iconTrash" aria-hidden="true"></i>
         </div>
     </div>
