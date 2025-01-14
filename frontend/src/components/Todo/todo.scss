@@ -1,0 +1,53 @@
+.todo {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    width: 100%;
+    font-size: 12px;
+    &:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        transform: scale(1.01);
+    }
+    .checked {
+        color: #f36957;
+    }
+    .fa-check-circle-o {
+        color: rgb(216, 216, 216);
+    }
+    .text {
+        display: flex;
+        grid-gap: 1px;
+        flex-direction: column;
+        text-align: left;
+        .date {
+            font-size: 12px;
+        }
+    }
+    i {
+        font-size: 19px;
+    }
+    .icons {
+        display: flex;
+        grid-gap: 1vw;
+        margin-left: auto;
+        i {
+            color: #f36957;
+            cursor: pointer;
+            &:hover {
+                scale: 1.2;
+            }
+        }
+    }
+}
+.checkedTodo {
+    background-color: rgb(231, 231, 231);
+    .text {
+        text-decoration: line-through;
+    }
+}
